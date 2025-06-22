@@ -13,7 +13,7 @@ import {
 import { Link } from "@heroui/link";
 import { Button } from "@heroui/button";
 import { siteConfig, SiteConfig } from "@/config/site";
-import { Logo } from "./logo";
+import { Logo } from "./UI/logo";
 
 
 export default function Navbar() {
