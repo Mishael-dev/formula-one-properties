@@ -67,9 +67,9 @@ export default function Testimonial() {
   ];
 
   return (
-    <section>
+    <section className="my-32">
       <Container>
-        <h2 className="text=semibold text-[60px] text-center mt-20">
+        <h2 className="font-semibold text-5xl md:text-7xl text-center ">
           What our Clients Say
         </h2>
         <div className="flex flex-col gap-4 items-center justify-between">
@@ -89,41 +89,42 @@ export default function Testimonial() {
           <p className="text-default-400 text-sm">⭐⭐⭐⭐⭐ 5.0 on google</p>
         </div>
 
-        <ScrollShadow hideScrollBar className="h-[35rem] mt-16">
-          <div className="flex flex-wrap gap-10 ">
-            {reviews.map((item, index) => (
-              <Card className="max-w-sm w-96 p-2" key={index}>
-                <CardHeader className="justify-between">
-                  <div className="flex gap-5">
-                    <Avatar
-                      isBordered
-                      radius="full"
-                      size="lg"
-                      src={item.avatar}
-                    />
-                    <div className="flex flex-col gap-1 items-start justify-center">
-                      <h4 className="font-semibold leading-none text-default-600">
-                        {item.name}
-                      </h4>
-                    </div>
+        <ScrollShadow
+          hideScrollBar
+          className="h-[35rem] mt-16 flex flex-wrap gap-10 justify-center"
+        >
+          {reviews.map((item, index) => (
+            <Card className="max-w-full w-96 p-2" key={index}>
+              <CardHeader className="justify-between">
+                <div className="flex gap-5">
+                  <Avatar
+                    isBordered
+                    radius="full"
+                    size="lg"
+                    src={item.avatar}
+                  />
+                  <div className="flex flex-col gap-1 items-start justify-center">
+                    <h4 className="font-semibold leading-none text-default-600">
+                      {item.name}
+                    </h4>
                   </div>
-                </CardHeader>
-                <CardBody className="px-3 py-0">
-                  <p>{item.text}</p>
-                </CardBody>
-                <CardFooter className="gap-3">
-                  <Button
-                    className="bg-transparent text-foreground border-default-200"
-                    color="primary"
-                    size="md"
-                    variant={"bordered"}
-                  >
-                    <Link href={item.url}>View</Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+                </div>
+              </CardHeader>
+              <CardBody className="px-3 py-0">
+                <p>{item.text}</p>
+              </CardBody>
+              <CardFooter className="gap-3">
+                <Button
+                  className="bg-transparent text-foreground border-default-200"
+                  color="primary"
+                  size="md"
+                  variant={"bordered"}
+                >
+                  <Link href={item.url}>View</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
         </ScrollShadow>
       </Container>
     </section>
