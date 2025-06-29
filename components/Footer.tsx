@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Container } from "@/components/UI/container";
 import Image from "next/image";
 import { Input } from "@heroui/input";
 import { Textarea } from "@heroui/input";
@@ -9,30 +8,23 @@ import { Button } from "@heroui/button";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoFacebook, IoLogoLinkedin } from "react-icons/io5";
-import ContactForm from "./contactForm";
+
+import { Container } from "@/components/UI/container";
 
 function Form() {
   return (
     <form
-      method="POST"
       action={"https://formsubmit.co/themishaeldaap@gmail.com"}
       className="flex flex-col gap-2"
+      method="POST"
     >
-      <Input
-        type="email"
-        placeholder="your email"
-      />
+      <Input placeholder="your email" type="email" />
       <Textarea
         className=""
         label="Your Message"
         placeholder="what do you want to tell us"
-        // eslint-disable-next-line no-console
       />
-      <Button
-        type="submit"
-        variant="flat"
-        color="primary"
-      >
+      <Button color="primary" type="submit" variant="flat">
         Send
       </Button>
     </form>
@@ -79,7 +71,8 @@ export default function Footer() {
         href: "https://www.linkedin.com/company/f1-properties/?originalSubdomain=au",
         label: "Linked In",
         icon: <IoLogoLinkedin className="text-2xl" />,
-      },{
+      },
+      {
         href: "https://www.linkedin.com/company/f1-properties/?originalSubdomain=au",
         label: "Facebook",
         icon: <IoLogoFacebook className="text-2xl" />,
@@ -94,7 +87,7 @@ export default function Footer() {
           <div className="flex flex-col md:w-96 w-full">
             <Form />
             <div className="flex items-end mb-4 mt-8">
-              <Image src={"/logo.png"} alt="logo" width={100} height={80} />
+              <Image alt="logo" height={80} src={"/logo.png"} width={100} />
               <div className="flex flex-col font-bold text-lg leading-none uppercase">
                 <span className="leading-none text-[#F9E603]">Formula one</span>
                 <span className="leading-none tracking-widest">Properties</span>
@@ -106,7 +99,9 @@ export default function Footer() {
             <h3 className=" text-default-600">{links.header}</h3>
             <ul className="flex mt-2 gap-1 flex-col font-light">
               {links.items.map((item, index) => (
-                <Link key={index} href={item.href}>{item.label}</Link>
+                <Link key={index} href={item.href}>
+                  {item.label}
+                </Link>
               ))}
             </ul>
           </div>
@@ -115,7 +110,9 @@ export default function Footer() {
             <h3 className=" text-default-600">{pages.header}</h3>
             <ul className="flex mt-2 gap-1 flex-col font-light">
               {pages.items.map((item, index) => (
-                <Link key={index} href={item.href}>{item.label}</Link>
+                <Link key={index} href={item.href}>
+                  {item.label}
+                </Link>
               ))}
             </ul>
           </div>
@@ -142,10 +139,10 @@ export default function Footer() {
         </span>
 
         <div className="hidden md:flex justify-between gap-4 ">
-          <Link href={"/terms"} className="text-sm tracking-tight">
+          <Link className="text-sm tracking-tight" href={"/terms"}>
             Terms and Conditions
           </Link>
-          <Link href={"/policy"} className="text-sm tracking-tight">
+          <Link className="text-sm tracking-tight" href={"/policy"}>
             Privacy Policy
           </Link>
         </div>

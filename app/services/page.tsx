@@ -1,8 +1,7 @@
-import { Container } from "@/components/UI/container";
 import { Image } from "@heroui/image";
-import { Card } from "@heroui/card";
+
 import CTA from "@/components/cta";
-import { Divider } from "@heroui/divider";
+import { Container } from "@/components/UI/container";
 
 export default function AboutPage() {
   const services = [
@@ -32,7 +31,7 @@ export default function AboutPage() {
         <Container>
           <div className="md:flex items-end gap-8">
             <h1 className="font-semibold text-5xl md:text-6xl text-left md:basis-[45%]">
-              Let's Bring Your Vision To life
+              Let&rsquo;s Bring Your Vision To life
             </h1>
 
             <p className="text-default-600 mt-8 basis-[60%]">
@@ -45,7 +44,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-16 w-full h-[30rem] bg-[url('/services.jpg')] bg-cover bg-center bg-no-repeat rounded-2xl overflow-hidden"></div>
+          <div className="mt-16 w-full h-[30rem] bg-[url('/services.jpg')] bg-cover bg-center bg-no-repeat rounded-2xl overflow-hidden" />
         </Container>
       </section>
 
@@ -75,7 +74,7 @@ export default function AboutPage() {
                       {item.description}
                     </p>
 
-                    <Image src={item.image} className="mt-4" />
+                    <Image className="mt-4" src={item.image} />
                   </div>
                 ))}
               </div>

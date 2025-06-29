@@ -14,13 +14,13 @@ export interface Property {
   updated_at: string; // same as above
 }
 
-
 export const properties: Property[] = [
   {
     id: "e1a1f3a0-b123-4f3c-a1f1-1f0b1c3d9a00",
     company_id: "f9f9c2a1-8123-47c9-b7a9-123a0c56e987",
     title: "3-Bedroom Apartment in Lekki",
-    description: "Modern 3-bedroom apartment with a sea view and all amenities included.",
+    description:
+      "Modern 3-bedroom apartment with a sea view and all amenities included.",
     price: 45000000,
     location: "Lekki Phase 1, Lagos",
     status: "active",
@@ -33,7 +33,8 @@ export const properties: Property[] = [
     id: "d2a2b4a0-c222-4b4d-b2e2-2e0a2c4e9b11",
     company_id: "f9f9c2a1-8123-47c9-b7a9-123a0c56e987",
     title: "Luxury Duplex in Maitama",
-    description: "Exquisite duplex located in a serene area of Maitama with 24/7 power supply.",
+    description:
+      "Exquisite duplex located in a serene area of Maitama with 24/7 power supply.",
     price: 120000000,
     location: "Maitama, Abuja",
     status: "sold",
@@ -46,7 +47,8 @@ export const properties: Property[] = [
     id: "c3c3e5c0-d333-4c5e-c3f3-3f1c3d5f0c22",
     company_id: "aa9a84c1-61a7-4f48-9133-a019ea720dbc",
     title: "Affordable Mini Flat in Yaba",
-    description: "Mini flat ideal for students or young professionals near UNILAG.",
+    description:
+      "Mini flat ideal for students or young professionals near UNILAG.",
     price: 15000000,
     location: "Yaba, Lagos",
     status: "draft",
@@ -59,7 +61,8 @@ export const properties: Property[] = [
     id: "b4d4f6e0-e444-4d6f-d4a4-4a2d4e6f1d33",
     company_id: "aa9a84c1-61a7-4f48-9133-a019ea720dbc",
     title: "4-Bedroom Detached Duplex in Enugu",
-    description: "Spacious detached duplex in a gated estate with modern interior design.",
+    description:
+      "Spacious detached duplex in a gated estate with modern interior design.",
     price: 38000000,
     location: "Independence Layout, Enugu",
     status: "active",
@@ -72,7 +75,8 @@ export const properties: Property[] = [
     id: "a5e5b7f0-f555-4e7b-e5b5-5b3e5f7b2e44",
     company_id: "bb8b75d2-52b7-4e47-b733-b908fa8191cd",
     title: "Studio Apartment in Ikeja",
-    description: "Compact and affordable studio apartment near Ikeja City Mall.",
+    description:
+      "Compact and affordable studio apartment near Ikeja City Mall.",
     price: 9500000,
     location: "Ikeja, Lagos",
     status: "archived",
@@ -111,7 +115,8 @@ export const properties: Property[] = [
     id: "d9d9e1b3-c8d8-4f82-ab9b-9f5b3d0c9c33",
     company_id: "dd6d54e4-30b5-4c25-a51a-d029ca506aac",
     title: "2-Bedroom Flat in Asokoro",
-    description: "Perfect for small families with easy access to the city center.",
+    description:
+      "Perfect for small families with easy access to the city center.",
     price: 27000000,
     location: "Asokoro, Abuja",
     status: "active",

@@ -3,8 +3,9 @@ import { Image } from "@heroui/image";
 import { Button } from "@heroui/button";
 import { CiLocationOn } from "react-icons/ci";
 import Link from "next/link";
-import { Container } from "@/components/UI/container";
 import { ScrollShadow } from "@heroui/scroll-shadow";
+
+import { Container } from "@/components/UI/container";
 
 export default function Projects() {
   const properties = [
@@ -72,10 +73,10 @@ export default function Projects() {
                 <Image
                   alt="Card background"
                   className="object-cover rounded-xl w-full"
+                  height={300}
+                  object-fit={"cover"}
                   src={item.image}
                   width={"full"}
-                  object-fit={"cover"}
-                  height={300}
                 />
               </CardBody>
 
@@ -87,7 +88,7 @@ export default function Projects() {
                     <CiLocationOn /> {item.location}
                   </span>
                 </h4>
-                <Button variant="bordered" className="w-full rounded-md">
+                <Button className="w-full rounded-md" variant="bordered">
                   <Link href={"/contact"}>Get A Quote</Link>
                 </Button>
               </CardFooter>

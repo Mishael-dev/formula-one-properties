@@ -1,16 +1,16 @@
-import { Container } from "@/components/UI/container";
 import { Button } from "@heroui/button";
-import FAQ from "@/components/Faq";
 import { IoMdMail } from "react-icons/io";
 import { FaPhoneAlt, FaDirections } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import Link from "next/link";
-import ContactForm from "@/components/contactForm";
-
 import { BsInstagram } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 import { BiLogoFacebookSquare } from "react-icons/bi";
 import { BsLinkedin } from "react-icons/bs";
+
+import ContactForm from "@/components/contactForm";
+import FAQ from "@/components/Faq";
+import { Container } from "@/components/UI/container";
 
 function MailIcon() {
   return <IoMdMail />;
@@ -63,6 +63,7 @@ export default function AboutPage() {
       href: "https://www.linkedin.com/in/oluwayomi-alao-93255684/",
     },
   ];
+
   return (
     <>
       <section className="my-32">
@@ -80,7 +81,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-16 w-full h-[30rem] bg-[url('/office.jpg')] bg-cover bg-center bg-no-repeat rounded-2xl overflow-hidden"></div>
+          <div className="mt-16 w-full h-[30rem] bg-[url('/office.jpg')] bg-cover bg-center bg-no-repeat rounded-2xl overflow-hidden" />
         </Container>
       </section>
 
@@ -95,8 +96,8 @@ export default function AboutPage() {
                 </h3>
                 <div className="flex flex-wrap gap-4">
                   <Button
-                    size="lg"
                     className="rounded-sm"
+                    size="lg"
                     startContent={<MailIcon />}
                   >
                     <Link
@@ -107,8 +108,8 @@ export default function AboutPage() {
                     </Link>
                   </Button>
                   <Button
-                    size="lg"
                     className="rounded-sm"
+                    size="lg"
                     startContent={<PhoneIcon />}
                   >
                     <Link className="text-lg" href="tel:+2348103691985">
@@ -131,8 +132,8 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <Button
-                    size="lg"
                     className="rounded-sm"
+                    size="lg"
                     startContent={<DirectionIcon />}
                   >
                     <Link
@@ -158,7 +159,7 @@ export default function AboutPage() {
                       className="rounded-sm"
                       size="lg"
                     >
-                      <Link href={item.href} className="text-lg">
+                      <Link className="text-lg" href={item.href}>
                         {item.icon}
                       </Link>
                     </Button>

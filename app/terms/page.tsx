@@ -1,8 +1,4 @@
 import { Container } from "@/components/UI/container";
-import { Image } from "@heroui/image";
-import { Card } from "@heroui/card";
-import CTA from "@/components/cta";
-import { Divider } from "@heroui/divider";
 
 export default function AboutPage() {
   const items = [
@@ -50,9 +46,7 @@ export default function AboutPage() {
           Terms of Use
         </h1>
         <div className="flex justify-center">
-          <span className="text-default-500">
-            Last Updated 24 June 2025
-          </span>
+          <span className="text-default-500">Last Updated 24 June 2025</span>
         </div>
 
         <div className="mt-16">

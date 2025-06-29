@@ -1,11 +1,7 @@
 "use client";
 import { Input } from "@heroui/input";
 import { IoSearchOutline } from "react-icons/io5";
-import {
-  Autocomplete,
-  AutocompleteSection,
-  AutocompleteItem,
-} from "@heroui/autocomplete";
+import { Autocomplete, AutocompleteItem } from "@heroui/autocomplete";
 import { CiHome } from "react-icons/ci";
 import { FaRegMoneyBill1 } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
@@ -17,13 +13,14 @@ export function useSearchRedirect() {
   const setSearchQuery = useCallback(
     (term: string) => {
       const params = new URLSearchParams();
+
       if (term) {
         params.set("search", term);
       }
 
       router.push(`/properties?${params.toString()}`);
     },
-    [router]
+    [router],
   );
 
   return { setSearchQuery };
@@ -63,14 +60,14 @@ export default function Search() {
     <div className="flex px-10 md:px-20 -mt-16 md:-mt-4 z-10">
       <div className="flex gap-2 bg-default-100 z-10 w-full rounded-md flex-col md:flex-row">
         <Input
-          placeholder="search term"
           className="md:basis-[50%]"
-          variant="flat"
+          placeholder="search term"
           size="lg"
           startContent={
             <IoSearchOutline className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
           }
           type="text"
+          variant="flat"
           onChange={(e) => setSearchQuery(e.target.value)}
         />
 
@@ -78,9 +75,9 @@ export default function Search() {
           {filters.map((item, index) => (
             <Autocomplete
               key={index}
-              startContent={item.icon}
-              size="sm"
               label={item.label}
+              size="sm"
+              startContent={item.icon}
             >
               {item.options.map((option, index1) => (
                 <AutocompleteItem key={index1}>{option.label}</AutocompleteItem>

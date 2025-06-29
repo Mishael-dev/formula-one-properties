@@ -1,4 +1,5 @@
-import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
+import { Card, CardHeader, CardBody } from "@heroui/card";
+
 import { Container } from "@/components/UI/container";
 
 export default function FAQ() {
@@ -25,6 +26,7 @@ export default function FAQ() {
         "We utilize a combination of market analysis techniques, including comparative market analysis (CMA) of recently sold properties in your area, current market trends, and property specific features to determine an accurate market value.",
     },
   ];
+
   return (
     <section className="my-32">
       <Container>

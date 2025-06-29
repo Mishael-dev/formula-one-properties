@@ -3,8 +3,9 @@ import React from "react";
 import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
 import { Button } from "@heroui/button";
 import Link from "next/link";
-import { Container } from "@/components/UI/container";
 import { ScrollShadow } from "@heroui/scroll-shadow";
+
+import { Container } from "@/components/UI/container";
 
 export default function Testimonial() {
   const reviews = [
@@ -94,7 +95,7 @@ export default function Testimonial() {
           className="h-[35rem] mt-16 flex flex-wrap gap-10 justify-center"
         >
           {reviews.map((item, index) => (
-            <Card className="max-w-full w-96 p-2" key={index}>
+            <Card key={index} className="max-w-full w-96 p-2">
               <CardHeader className="justify-between">
                 <div className="flex gap-5">
                   <Avatar

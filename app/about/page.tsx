@@ -1,8 +1,9 @@
-import { Container } from "@/components/UI/container";
 import { Image } from "@heroui/image";
 import { Card } from "@heroui/card";
-import CTA from "@/components/cta";
 import { Divider } from "@heroui/divider";
+
+import CTA from "@/components/cta";
+import { Container } from "@/components/UI/container";
 
 export default function AboutPage() {
   return (
@@ -25,18 +26,18 @@ export default function AboutPage() {
           <div className="flex justify-between items-center mt-16">
             <div className="md:basis-[40%] border bg-[url('/aboutbg.svg')] bg-cover bg-center rounded-2xl">
               <Image
-                alt="Yomi"
                 isBlurred
-                src="/about.png"
+                alt="Yomi"
                 className="w-full h-auto border"
+                src="/about.png"
               />
             </div>
 
             <div className="hidden md:block basis-[55%]">
               <Image
                 alt="an image"
-                src="/about2.jpg"
                 className="w-full h-auto"
+                src="/about2.jpg"
               />
             </div>
           </div>
@@ -54,11 +55,11 @@ export default function AboutPage() {
               <p className="text-default-700 leading-6 text-justify">
                 At Formula One Properties, I spearhead a team of aggressive
                 realtors and marketing consultants, working round-the-clock to
-                bring you the very best of Abuja's realty market. With over 9
-                years experience in the real estate sector, and an impressive
-                sales record of countless deals in both houses and lands, "I
-                strongly believe I AM the go-to 🔌 plug for everything Real
-                Estate in ABUJA.{" "}
+                bring you the very best of Abuja&rsquo;s realty market. With
+                over 9 years experience in the real estate sector, and an
+                impressive sales record of countless deals in both houses and
+                lands, &rsquo;I strongly believe I AM the go-to 🔌 plug for
+                everything Real Estate in ABUJA.&rsquo;
               </p>
               <Card
                 isBlurred
@@ -66,19 +67,19 @@ export default function AboutPage() {
               >
                 <div className="flex gap-4">
                   <Image
-                    alt="Yomi"
                     isBlurred
-                    src="/about.png"
+                    alt="Yomi"
                     className="w-full h-auto border border-default-500 basis-[20%] flex-shrink-0"
                     height={70}
+                    src="/about.png"
                     width={70}
                   />
                   <div className="basis-[70%] ">
                     <p className="leading-6 ">
                       At Formula One Properties, we believe that finding a home
-                      is more than a transaction — it's a journey of trust,
-                      precision, and purpose. Our mission is to redefine real
-                      estate in Abuja by delivering speed, quality, and
+                      is more than a transaction — it&rsquo;s a journey of
+                      trust, precision, and purpose. Our mission is to redefine
+                      real estate in Abuja by delivering speed, quality, and
                       integrity in every deal.
                     </p>
 
@@ -111,18 +112,18 @@ export default function AboutPage() {
                 long-term value. Having closed countless successful deals across
                 Abuja’s most sought-after locations, Yomi confidently brands
                 himself as the go-to plug 🔌 for everything Real Estate in
-                ABUJA. Whether you're a first-time homebuyer, a seasoned
+                ABUJA. Whether you&rsquo;re a first-time homebuyer, a seasoned
                 investor, or a developer with a vision, Yomi is the trusted
                 expert who can help you bring your real estate goals to life.
-                "For me, real estate is not just about selling houses—it's about
-                building trust, creating wealth, and helping people find a place
-                to call home. Abuja has so much potential, and my mission is to
-                help you tap into it, the right way." – Yomi If you're ready to
-                take the next step toward owning, building, or investing in real
-                estate in Abuja, then Yomi is the person to talk to. With his
-                commitment to excellence, honest advisory, and unmatched hustle,
-                he’s more than just a broker—he’s your partner in real estate
-                success.
+                &rdquo;For me, real estate is not just about selling
+                houses—it&rsquo;s about building trust, creating wealth, and
+                helping people find a place to call home. Abuja has so much
+                potential, and my mission is to help you tap into it, the right
+                way.&rsquo; – Yomi. If you&rsquo;re ready to take the next step
+                toward owning, building, or investing in real estate in Abuja,
+                then Yomi is the person to talk to. With his commitment to
+                excellence, honest advisory, and unmatched hustle, he’s more
+                than just a broker—he’s your partner in real estate success.
               </p>
             </div>
           </div>
@@ -146,7 +147,9 @@ export default function AboutPage() {
               <span className="font-semibold text-2xl md:text-5xl tracking-tighter text-primary">
                 250k+
               </span>{" "}
-              <span className="tracking-widest text-sm text-center">Deals Closed</span>
+              <span className="tracking-widest text-sm text-center">
+                Deals Closed
+              </span>
             </div>
 
             <Divider orientation="vertical" />
@@ -155,7 +158,9 @@ export default function AboutPage() {
               <span className="font-semibold text-2xl md:text-5xl tracking-tighter text-primary">
                 12k+
               </span>{" "}
-              <span className="tracking-widest text-sm text-center">Customers Served</span>
+              <span className="tracking-widest text-sm text-center">
+                Customers Served
+              </span>
             </div>
 
             <Divider orientation="vertical" />
@@ -164,7 +169,9 @@ export default function AboutPage() {
               <span className="font-semibold text-2xl md:text-5xl tracking-tighter text-primary">
                 10k+
               </span>{" "}
-              <span className="tracking-widest text-sm text-center">Houses Sold</span>
+              <span className="tracking-widest text-sm text-center">
+                Houses Sold
+              </span>
             </div>
           </div>
         </Container>

@@ -28,17 +28,17 @@ export default function ContactForm() {
       <div className="flex gap-4 mb-4">
         <Input
           className="basis-[40%]"
+          placeholder="Your Name"
           startContent={<UserIcon />}
           type="text"
-          placeholder="Your Name"
           variant="bordered"
         />
 
         <Input
           className="basis-[60%]"
+          placeholder="Your Email"
           startContent={<MailIcon />}
           type="email"
-          placeholder="Your Email"
           variant="bordered"
         />
       </div>
@@ -48,28 +48,28 @@ export default function ContactForm() {
       <div className="flex justify-between mt-4 items-center gap-4">
         <div className="flex gap-2 items-center">
           <Checkbox
-          color="primary"
-          isSelected={isSelected}
-          onValueChange={setIsSelected}
-        ></Checkbox>
-        <div className="text-default-500 text-sm">
-          I agree with the{" "}
-          <Link href="/terms" className="underline">
-            Terms Of Use
-          </Link>{" "}
-          and the{" "}
-          <Link href="/policy" className="underline">
-            Privacy Policy
-          </Link>{" "}
-        </div>
+            color="primary"
+            isSelected={isSelected}
+            onValueChange={setIsSelected}
+          />
+          <div className="text-default-500 text-sm">
+            I agree with the{" "}
+            <Link className="underline" href="/terms">
+              Terms Of Use
+            </Link>{" "}
+            and the{" "}
+            <Link className="underline" href="/policy">
+              Privacy Policy
+            </Link>{" "}
+          </div>
         </div>
 
         <Button
+          className="rounded-lg"
+          color="primary"
+          endContent={<SendIcon />}
           isDisabled={!isSelected}
           size="md"
-          color="primary"
-          className="rounded-lg"
-          endContent={<SendIcon />}
           type="submit"
           variant={"flat"}
         >

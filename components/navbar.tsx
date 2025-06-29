@@ -7,14 +7,13 @@ import {
   NavbarItem,
   NavbarMenuToggle,
   NavbarMenu,
-  NavbarMenuItem,
 } from "@heroui/navbar";
-
 import { Link } from "@heroui/link";
 import { Button } from "@heroui/button";
-import { siteConfig, SiteConfig } from "@/config/site";
+
 import { Logo } from "./UI/logo";
 
+import { siteConfig } from "@/config/site";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -27,9 +26,13 @@ export default function Navbar() {
     </NavbarItem>
   ));
 
-   const Menu = siteConfig.navItems.map((item, index) => (
+  const Menu = siteConfig.navItems.map((item, index) => (
     <NavbarItem key={index} className="">
-      <Link className="text-2xl font-semibold" color="foreground" href={item.href}>
+      <Link
+        className="text-2xl font-semibold"
+        color="foreground"
+        href={item.href}
+      >
         {item.label}
       </Link>
     </NavbarItem>
@@ -60,9 +63,7 @@ export default function Navbar() {
         />
       </NavbarContent>
 
-      <NavbarMenu className="flex gap-20 pt-10 ">
-        {Menu}
-      </NavbarMenu>
+      <NavbarMenu className="flex gap-20 pt-10 ">{Menu}</NavbarMenu>
     </HeroNav>
   );
 }
