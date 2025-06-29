@@ -3,10 +3,7 @@ import { Container } from "@/components/UI/container";
 import { Image } from "@heroui/image";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
-
-const PropertyList = dynamic(() => import("../../components/properylist"), {
-  ssr: false,
-});
+import PropertyList from "@/components/properylist";
 
 export default function Properties() {
   return (
