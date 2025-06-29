@@ -13,35 +13,35 @@ export default function Projects() {
       description:
         "Spacious 4-bedroom fully detached duplex with BQ, modern fittings, POP ceiling, and ample parking space. Located in a serene and secured neighborhood.",
       location: "Guzape, Abuja",
-      image: "https://example.com/images/guzape-duplex.jpg",
+      image: "/property.jpg",
     },
     {
       name: "3-Bedroom Apartment in Jabi Lake View",
       description:
         "Modern 3-bedroom serviced apartment with lake view, 24/7 power, security, and a swimming pool. Ideal for young professionals or small families.",
       location: "Jabi, Abuja",
-      image: "https://example.com/images/jabi-apartment.jpg",
+      image: "/property1.jpg",
     },
     {
       name: "Affordable 2-Bedroom Flat in Kubwa",
       description:
         "Clean and affordable 2-bedroom flat in a gated compound with water and electricity. Perfect for first-time renters or young couples.",
       location: "Kubwa, Abuja",
-      image: "https://example.com/images/kubwa-flat.jpg",
+      image: "/property2.jpg",
     },
     {
       name: "3-Bedroom Apartment in Jabi Lake View",
       description:
         "Modern 3-bedroom serviced apartment with lake view, 24/7 power, security, and a swimming pool. Ideal for young professionals or small families.",
       location: "Jabi, Abuja",
-      image: "https://example.com/images/jabi-apartment.jpg",
+      image: "/property3.jpg",
     },
     {
       name: "Affordable 2-Bedroom Flat in Kubwa",
       description:
         "Clean and affordable 2-bedroom flat in a gated compound with water and electricity. Perfect for first-time renters or young couples.",
       location: "Kubwa, Abuja",
-      image: "https://example.com/images/kubwa-flat.jpg",
+      image: "/property2.jpg",
     },
   ];
 
@@ -66,13 +66,16 @@ export default function Projects() {
           {properties.map((item, index) => (
             <Card
               key={index}
-              className="bg-transparent border border-default-300 max-w-sm p-2 shrink-0"
+              className="bg-transparent border border-default-300 max-w-sm w-fit p-2 shrink-0"
             >
               <CardBody className="overflow-visible py-2">
                 <Image
                   alt="Card background"
                   className="object-cover rounded-xl w-full"
-                  src="https://heroui.com/images/hero-card-complete.jpeg"
+                  src={item.image}
+                  width={"full"}
+                  object-fit={"cover"}
+                  height={300}
                 />
               </CardBody>
 
@@ -85,7 +88,7 @@ export default function Projects() {
                   </span>
                 </h4>
                 <Button variant="bordered" className="w-full rounded-md">
-                  <Link href={"/"}>View Property</Link>
+                  <Link href={"/contact"}>Get A Quote</Link>
                 </Button>
               </CardFooter>
             </Card>

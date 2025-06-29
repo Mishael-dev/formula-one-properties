@@ -49,7 +49,7 @@ export default function Navbar() {
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button as={Link} color="primary" href="/contact" variant="flat">
             Call us
           </Button>
         </NavbarItem>

@@ -8,7 +8,8 @@ import { Textarea } from "@heroui/input";
 import { Button } from "@heroui/button";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { IoLogoLinkedin } from "react-icons/io5";
+import { IoLogoFacebook, IoLogoLinkedin } from "react-icons/io5";
+import ContactForm from "./contactForm";
 
 function Form() {
   return (
@@ -19,21 +20,18 @@ function Form() {
     >
       <Input
         type="email"
-        placeholder="youremail"
-        label="Send Us A message"
-        labelPlacement="outside"
+        placeholder="your email"
       />
       <Textarea
         className=""
         label="Your Message"
         placeholder="what do you want to tell us"
         // eslint-disable-next-line no-console
-        onClear={() => console.log("textarea cleared")}
       />
       <Button
         type="submit"
-        className="bg-primary text-primary-foreground"
-        variant="solid"
+        variant="flat"
+        color="primary"
       >
         Send
       </Button>
@@ -81,6 +79,10 @@ export default function Footer() {
         href: "https://www.linkedin.com/company/f1-properties/?originalSubdomain=au",
         label: "Linked In",
         icon: <IoLogoLinkedin className="text-2xl" />,
+      },{
+        href: "https://www.linkedin.com/company/f1-properties/?originalSubdomain=au",
+        label: "Facebook",
+        icon: <IoLogoFacebook className="text-2xl" />,
       },
     ],
   };
